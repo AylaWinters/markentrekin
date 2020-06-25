@@ -13,14 +13,14 @@ router.get("/blog", async (req, res) => {
 });
 
 router.post("/blog", async (req, res) => {
-  console.log(req.body);
-  const blog = new Blog({
-    author: req.body.author,
+  console.log("req.body", req.body);
+  const blog = new BlogForm({
     title: req.body.title,
     blog: req.body.blog,
   });
   try {
     await blog.save();
+    res.redirect("/blog");
     res.status(201).json(req.body);
   } catch (err) {
     console.error(err.message);

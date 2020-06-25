@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const BlogSchema = new mongoose.Schema({
   author: {
     type: String,
-    required: true,
+    default: "Mark Entrekin",
   },
   title: {
     type: String,
