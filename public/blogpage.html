@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mark Entrekin</title>
+    <title>Blog | Mark Entrekin</title>
     <link rel="shortcut icon" href="./assets/me.jpg" type="image/x-icon" />
     <link
       rel="stylesheet"
@@ -58,36 +58,16 @@
       </div>
     </nav>
 
-    <form
-      action="/api/blog"
-      method="POST"
-      id="blog-form"
-      class="blog-form container mt-5"
-    >
-      <label for="title">Title</label>
-      <input type="text" class="form-control" name="title" id="title" />
-      <br />
-      <label for="desc">Description</label>
-      <textarea
-        type="text"
-        class="form-control"
-        name="desc"
-        id="desc"
-        rows="2"
-        maxlength="310"
-      ></textarea>
-      <br />
-      <label for="blog">Text</label>
-      <textarea
-        name="blog"
-        id="blog"
-        class="form-control mb-3"
-        rows="15"
-        cols="120"
-      ></textarea>
+    <h1 class="center my-5">Private Blog Page</h1>
 
-      <input type="submit" value="submit" />
-    </form>
+    <div id="blogModal">
+      <div id="closeModal" class="bg-danger">X</div>
+      <h3 id="blogTitle" class="center m-4"></h3>
+      <p id="blogText"></p>
+    </div>
+
+    <div id="blogs" class="container"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -135,6 +135,10 @@ td img {
   justify-content: center;
   align-items: center;
 }
+
+#blogText {
+  white-space: pre-wrap;
+}
 #closeModal {
   position: absolute;
   top: 10px;

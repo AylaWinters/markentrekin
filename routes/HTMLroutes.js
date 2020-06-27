@@ -14,11 +14,14 @@ module.exports = (app) => {
   app.get("/blog", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
   });
+  app.get("/blogpage", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/blogpage.html"));
+  });
   app.get("/blog/:id", async function (req, res) {
     try {
       const blog = await Blogform.findById(req.params.id);
       if (!blog) {
-        return res.status(404).json({ msg: "blog not found" });
+        return res.status(404).json({ msg: "Blog not found" });
       }
       res.json(blog);
     } catch (err) {
@@ -31,5 +34,9 @@ module.exports = (app) => {
   });
   app.get("/blogform", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/blogform.html"));
+  });
+  app.get("/blog/edit/:id", async (req, res) => {
+    // const blog = await BlogForm.findById(req.params.id);
+    res.sendFile(path.join(__dirname, "../public/editblog.html"));
   });
 };
