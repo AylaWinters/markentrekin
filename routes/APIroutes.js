@@ -14,6 +14,7 @@ router.get("/blog", async (req, res) => {
 
 router.post("/blog", async (req, res) => {
   console.log("req.body", req.body);
+
   const blog = new BlogForm({
     title: req.body.title,
     desc: req.body.desc,
