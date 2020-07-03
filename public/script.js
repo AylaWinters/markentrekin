@@ -1,3 +1,12 @@
+const textarea = document.getElementById("message");
+// textarea.style.height = "300px";
+textarea.addEventListener("input", autoResize, false);
+
+function autoResize() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+}
+
 dataCall();
 
 async function dataCall() {
@@ -69,13 +78,3 @@ const closeModal = () => {
   const modal = document.getElementById("blogModal");
   modal.style.display = "none";
 };
-
-// editForm();
-// async function editForm() {
-//   const res = await fetch(`/api/blog`);
-//   const data = await res.json();
-//   const test = data.findById();
-
-//   const editTitle = document.getElementsByClassName("edit-title");
-//   editTitle.value = data.title;
-// }

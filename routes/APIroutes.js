@@ -29,8 +29,8 @@ router.post("/blog", async (req, res) => {
   }
 });
 
-router.get("/blog/edit/:id", async (req, res) => {
-  const blog = await BlogForm.findById(req.params.id);
+router.put("/blog/edit/:id", async (req, res) => {
+  await BlogForm.findById(req.params.id);
   res.send("hello");
 });
 
