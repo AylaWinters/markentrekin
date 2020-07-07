@@ -1,6 +1,8 @@
 const textarea = document.getElementById("message");
 // textarea.style.height = "300px";
-textarea.addEventListener("input", autoResize, false);
+if (textarea) {
+  textarea.addEventListener("input", autoResize, false);
+}
 
 function autoResize() {
   this.style.height = "auto";
