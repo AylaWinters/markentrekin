@@ -231,7 +231,6 @@ td img {
 .contact textarea:focus + .contact textarea {
   transform: translateY(-200%);
 }
-
 #submit-btn {
   background: white;
   color: maroon;
