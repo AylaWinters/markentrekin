@@ -1,12 +1,12 @@
 const textarea = document.getElementById("message");
 // textarea.style.height = "300px";
-if (textarea) {
-  textarea.addEventListener("input", autoResize, false);
-}
+
+textarea && textarea.addEventListener("input", autoResize, false);
 
 function autoResize() {
   this.style.height = "auto";
   this.style.height = this.scrollHeight + "px";
+  this.style.marginBottom = this.scrollHeight + "px";
 }
 
 dataCall();
@@ -74,7 +74,7 @@ async function dataCall() {
 }
 
 const close = document.getElementById("closeModal");
-close.addEventListener("click", () => closeModal());
+close && close.addEventListener("click", () => closeModal());
 
 const closeModal = () => {
   const modal = document.getElementById("blogModal");

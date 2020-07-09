@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const sendMail = require("../public/mail");
 
 const BlogForm = require("../models/blogform");
 
@@ -27,6 +28,19 @@ router.post("/blog", async (req, res) => {
     console.error(err.message);
     res.status(500).send("server error");
   }
+});
+
+router.post("/contact", async (req, res) => {
+  console.log("contact req.body", req.body);
+  const { fname, lname, email, body } = req.body;
+
+  sendMail(fname, lname, email, body, (err, data) => {
+    if (err) {
+      res.status(500).json({ message: "internal error" });
+    } else {
+      res.redirect("/success");
+    }
+  });
 });
 
 router.put("/blog/edit/:id", async (req, res) => {

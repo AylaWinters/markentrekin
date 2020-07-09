@@ -17,6 +17,9 @@ module.exports = (app) => {
   app.get("/blogpage", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/blogpage.html"));
   });
+  app.get("/success", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/thankyou.html"));
+  });
   app.get("/blog/:id", async function (req, res) {
     try {
       const blog = await Blogform.findById(req.params.id);
