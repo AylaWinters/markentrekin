@@ -6,7 +6,8 @@ textarea && textarea.addEventListener("input", autoResize, false);
 function autoResize() {
   this.style.height = "auto";
   this.style.height = this.scrollHeight + "px";
-  this.style.marginBottom = this.scrollHeight + "px";
+  const submit = document.getElementById("submit-btn");
+  submit.style.marginTop = this.scrollHeight + "px";
 }
 
 dataCall();

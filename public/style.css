@@ -178,6 +178,11 @@ td img {
   position: relative;
   height: 50px;
 }
+.cont-body {
+  border: 2px solid maroon;
+  border-radius: 10px;
+  padding: 20px 0;
+}
 
 .contact input,
 .contact textarea {
@@ -263,6 +268,12 @@ td img {
   }
 }
 
+@media (max-width: 770px) {
+  #ytThumbs {
+    max-width: 700px;
+  }
+}
+
 @media (max-width: 700px) {
   .hero {
     background: url(./assets/SpeakingSmall.jpg);
@@ -271,14 +282,27 @@ td img {
   .hero-text {
     left: 25%;
   }
-
+  li {
+    margin-left: 15%;
+  }
   td h3,
   td:nth-last-child(even) {
     display: none;
+  }
+  table {
+    max-width: 320px;
+  }
+}
+@media (max-width: 500px) {
+  li {
+    margin-left: 10px;
   }
 }
 @media (max-width: 400px) {
   .hero-text {
     left: 10%;
+  }
+  li img {
+    width: 250px;
   }
 }
