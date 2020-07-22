@@ -163,21 +163,25 @@ td img {
   border-radius: 10px;
   overflow: scroll;
 }
+
 #blogText {
   padding: 0 20px;
   overflow: auto;
 }
+
 #blog-submit {
   margin-bottom: 100px;
 }
 .contact-form {
   position: relative;
 }
+
 .contact {
   width: 75%;
   position: relative;
   height: 50px;
 }
+
 .cont-body {
   border: 2px solid maroon;
   border-radius: 10px;
