@@ -282,6 +282,7 @@ td img {
   .hero {
     background: url(./assets/SpeakingSmall.jpg);
     background-attachment: fixed;
+    padding-top: 20px;
   }
   .hero-text {
     left: 25%;
