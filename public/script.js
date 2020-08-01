@@ -15,7 +15,6 @@ dataCall();
 async function dataCall() {
   try {
     const res = await fetch("/api/blog");
-
     const data = await res.json();
 
     const blogModal = (info) => {
