@@ -32,6 +32,7 @@ router.post("/blog", async (req, res) => {
 
 router.post("/contact", async (req, res) => {
   console.log("contact req.body", req.body);
+
   const { fname, lname, email, body } = req.body;
   sendMail(fname, lname, email, body, (err, data) => {
     if (err) {
