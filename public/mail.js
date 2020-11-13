@@ -16,8 +16,9 @@ const sendMail = (fname, lname, email, body, cb) => {
   const mailOptions = {
     from: email,
     to: "mark@markentrekin.com",
+    // to: "andre.entrekin@gmail.com",
     subject: "New Message from MarkEntrekin.com",
-    text: `${lname}, ${fname}
+    text: `${lname}, ${fname} says:
     ${body}`,
   };
 

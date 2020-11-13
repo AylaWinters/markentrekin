@@ -95,8 +95,13 @@ li {
 td:nth-last-child(even) {
   max-height: 180px;
   min-height: 180px;
+  min-width: 545px;
   overflow: hidden;
   display: list-item;
+}
+
+.ytcredits {
+  display: none;
 }
 
 .ytPlayer {
