@@ -1,7 +1,7 @@
 const express = require("express");
 const compression = require("compression");
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 const apiRoutes = require("./routes/APIroutes");
 const connectDB = require("./config/db");
 const methodOverride = require("method-override");
